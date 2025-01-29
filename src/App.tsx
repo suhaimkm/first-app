@@ -6,13 +6,14 @@ import Carslist from './components/Cars'
 import Cars from './components/Cars'
 
 import CoursesList from './components/CoursesList'
+import ProductList from './components/product'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
-      <Carslist/> 
+      <ProductList/> 
     </div>
     
       
