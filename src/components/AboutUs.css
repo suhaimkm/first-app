@@ -1,0 +1,53 @@
+
+.aboutus-container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .aboutus-header {
+    background-color: #710909;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .aboutus-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .aboutus-header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+  }
+  
+  .aboutus-image-section {
+    margin-top: 30px;
+  }
+  
+  .aboutus-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+p {
+    font-family: 'Arial', sans-serif; /* Sets the font style */
+    font-size: 16px; /* Adjusts the font size */
+    line-height: 1.6; /* Spacing between lines */
+    color: #333; /* Text color */
+    text-align: justify; /* Aligns text for better readability */
+    margin: 10px 0; /* Spacing around paragraphs */
+    padding: 5px 10px; /* Adds inner spacing */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-left: 4px solid #007BFF; /* Adds a left border for style */
+    border-radius: 5px; /* Slightly rounds corners */
+  }
+  
+  
