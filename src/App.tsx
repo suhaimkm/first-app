@@ -10,37 +10,27 @@ import CoursesList from './components/CoursesList'
 import ProductList from './components/product'
 import Vechiles from './components/Vehicles'
 import CoursesList2 from './components/CoursesList2'
+import ProductList2 from './components/ProductList2'
+import Carslist2 from './components/CarsList2'
+import fetchproducts from './services/ProductList2services'
+import getCars from './services/CarsServices'
+import getCourses from './services/CourseServices'
 
 function App() {
   const [count, setCount] = useState(0)
-  const cars = ['toyota', 'honda', 'ford', 'chevy', 'tesla', 'nissan', 'bmw', 'audi', 'mercedes', 'volkswagen', 'subaru', 'mazda', 'hyundai', 'kia', 'volvo', 'porsche', 'jaguar', 'land rover', 'mini', 'fiat', 'alfa romeo', 'maserati', 'lamborghini', 'ferrari', 'bugatti', 'bentley'];
-  const bikes = ['harley davidson', 'indian', 'bmw', 'ducati', 'triumph', 'yamaha', 'honda', 'suzuki', 'kawasaki', 'ktm', 'aprilia', 'mv agusta', 'royal enfield', 'bajaj', 'hero', 'tvs', 'jawa', 'husqvarna', 'benelli', 'norton', 'vespa', 'piaggio', 'aprilia', 'zero', 'cf moto', 'argo', 'can-am', 'kymco', 'vespa', 'piaggio', 'aprilia', 'zero', 'cf moto', 'argo', 'can-am', 'kymco'];
-  const trucks = ['ford', 'chevy', 'gmc', 'ram', 'toyota', 'nissan', 'honda', 'mercedes', 'volkswagen', 'isuzu', 'mitsubishi', 'hino', 'freightliner', 'peterbilt', 'kenworth', 'international', 'western star', 'mack', 'volvo', 'scania', 'daf', 'iveco'];
-  const courses = [
-    {
-      id: 1,
-      title: "advanced web design",
-      duration: "1 hours",
-    },
-    {
-      id: 2,
-      title: "python",
-      duration: "2 hours",
-    },
-    {
-      id: 3,
-      title: "java",
-      duration: "3 hours",
-    }
-  ];
+ 
+ 
+
   
 
   return (
     <div id = 'app'>
-      <Vechiles items={cars} title='list of cars' ></Vechiles> 
+      {/* <Vechiles items={cars} title='list of cars' ></Vechiles> 
       <Vechiles items={bikes} title='list of bikes' ></Vechiles>
-      <Vechiles items={trucks} title='list of trucks' ></Vechiles>
-      <CoursesList2 courses={courses} ></CoursesList2>
+      <Vechiles items={trucks} title='list of trucks' ></Vechiles> */}
+      <CoursesList2 courses={getCourses()} ></CoursesList2>
+      <ProductList2 products={fetchproducts()}></ProductList2>
+      <Carslist2  cars={getCars()}></Carslist2>
     </div>
     
       
