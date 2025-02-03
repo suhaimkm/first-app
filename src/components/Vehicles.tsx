@@ -1,7 +1,4 @@
-interface prop {
-    items: string[];
-    title: string; 
-}
+import prop from '../model/vechile';
 function Vehicles(prop : prop) {
     return (
         <div>

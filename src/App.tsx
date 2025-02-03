@@ -15,6 +15,11 @@ import Carslist2 from './components/CarsList2'
 import fetchproducts from './services/ProductList2services'
 import getCars from './services/CarsServices'
 import getCourses from './services/CourseServices'
+import getTrucks, { getBikes } from './services/vechiles'
+import Count from './components/count'
+import On from './components/offon'
+import Name from './components/name'
+import UserStatus from './components/UserStatus'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,12 +30,8 @@ function App() {
 
   return (
     <div id = 'app'>
-      {/* <Vechiles items={cars} title='list of cars' ></Vechiles> 
-      <Vechiles items={bikes} title='list of bikes' ></Vechiles>
-      <Vechiles items={trucks} title='list of trucks' ></Vechiles> */}
-      <CoursesList2 courses={getCourses()} ></CoursesList2>
-      <ProductList2 products={fetchproducts()}></ProductList2>
-      <Carslist2  cars={getCars()}></Carslist2>
+    <UserStatus />
+    
     </div>
     
       
