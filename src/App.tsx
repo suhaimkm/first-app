@@ -20,6 +20,8 @@ import Count from './components/count'
 import On from './components/offon'
 import Name from './components/name'
 import UserStatus from './components/UserStatus'
+import Bulb from './components/bulb'
+import Greeting from './components/Greeting'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,7 +32,9 @@ function App() {
 
   return (
     <div id = 'app'>
-    <UserStatus />
+      
+      <Greeting>hello Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio corrupti possimus ullam qui numquam esse ex adipisci nam architecto explicabo fugiat libero dolore voluptate, rerum praesentium. Ratione perspiciatis soluta saepe?</Greeting>
+      <UserStatus />
     
     </div>
     

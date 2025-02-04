@@ -1,16 +1,16 @@
 import { useState } from "react";
+import onImg from '../assets/on.jpg';
+import offImg from '../assets/off.jpg';
 
-const bulb = () => {
-    const [isON, setIsOn] = useState<boolean>(false);
-    
+const Bulb = () => {
+    const [isON, setIsOn] = useState<boolean>(true);
+
     return (
         <div>
-            <h2>status:</h2>
-            <button className=" bg-primary" onClick={() => setIsOn(!isON)}>bulb</button>
-
-
-            
+            <img src={isON ? onImg : offImg} alt="bulb" onClick={() => setIsOn(!isON)} />
+            <h2>{isON ? 'on' : 'off'}</h2>
+          
         </div>
     );
 };
-export default bulb;
+export default Bulb;
