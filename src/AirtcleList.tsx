@@ -18,8 +18,8 @@ const articles = [
 const ArticleList = () => {
     return (
         <div>
-            {articles.map((article, index) => (
-                <Article key={index} title={article.title}>{article.body}</Article>
+            {articles.map((article) => (
+                <Article  title={article.title}>{article.body}</Article>
             ))}
         </div>
     );
