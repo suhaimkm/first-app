@@ -22,6 +22,7 @@ import Name from './components/name'
 import UserStatus from './components/UserStatus'
 import Bulb from './components/bulb'
 import Greeting from './components/Greeting'
+import Article from './components/airticle'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,12 +32,15 @@ function App() {
   
 
   return (
-    <div id = 'app'>
+    <div id='app'>
+
+      <Article title='title: "React Basics'>React is a JavaScript library for building UIs.</Article>
+      <Article title='title: "React Basics'>React is a JavaScript library for building UIs.</Article>
+      <Article title='title: "React Basics'>React is a JavaScript library for building UIs.</Article>
       
-      <Greeting>hello Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio corrupti possimus ullam qui numquam esse ex adipisci nam architecto explicabo fugiat libero dolore voluptate, rerum praesentium. Ratione perspiciatis soluta saepe?</Greeting>
-      <UserStatus />
     
     </div>
+    
     
       
      
