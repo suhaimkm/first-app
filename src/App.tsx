@@ -24,6 +24,8 @@ import Bulb from './components/bulb'
 import Greeting from './components/Greeting'
 import Article from './components/airticle'
 import ArticleList from './AirtcleList'
+import getArticles from './services/AirtcleServices'
+import UserList from './components/UserList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,7 +37,8 @@ function App() {
   return (
     <div id='app'>
 
-     <ArticleList></ArticleList>
+     <UserList />
+      
       
     
     </div>

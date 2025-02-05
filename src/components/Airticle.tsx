@@ -1,7 +1,9 @@
 interface ArticleProps {
     title: string;
-    children: string; // Restricting children to only text
+    children: string;
+
 }
+
 const Article = ({ title, children }: ArticleProps) => {
     return (
         <div className="card shadow-sm my-3">
