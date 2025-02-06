@@ -26,6 +26,7 @@ import Article from './components/airticle'
 import ArticleList from './AirtcleList'
 import getArticles from './services/AirtcleServices'
 import UserList from './components/UserList'
+import ProductList3 from './components/ProductList3'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,6 +39,7 @@ function App() {
     <div id='app'>
 
      <UserList />
+     <ProductList3 />
       
       
     
