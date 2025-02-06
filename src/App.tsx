@@ -27,6 +27,7 @@ import ArticleList from './AirtcleList'
 import getArticles from './services/AirtcleServices'
 import UserList from './components/UserList'
 import ProductList3 from './components/ProductList3'
+import RecipeList from './components/RecipeList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,8 +39,9 @@ function App() {
   return (
     <div id='app'>
 
-     <UserList />
-     <ProductList3 />
+     {/* <UserList />
+     <ProductList3 /> */}
+     <RecipeList />
       
       
     
