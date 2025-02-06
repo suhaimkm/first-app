@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Route, BrowserRouter as Router, Routes,Link } from 'react-router-dom'
 
 import './App.css'
 import AboutUs from './components/AboutUs'
@@ -29,28 +30,62 @@ import UserList from './components/UserList'
 import ProductList3 from './components/ProductList3'
 import RecipeList from './components/RecipeList'
 
+
 function App() {
   const [count, setCount] = useState(0)
- 
- 
 
-  
+
+
+
 
   return (
-    <div id='app'>
+    
+    <Router>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">React</Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/cars">Cars</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/courses">Courses</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/products">Products</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<AboutUs />} />
+        <Route path="/cars" element={<Carslist />} />
+        <Route path="/courses" element={<CoursesList />} />
+        <Route path="/products" element={<ProductList3 />} />
+        
+   
 
-     {/* <UserList />
-     <ProductList3 /> */}
-     <RecipeList />
-      
-      
-    
-    </div>
-    
-    
-      
-     
-  )
+
+
+      </Routes>
+    </Router>
+
+
+
+
+
+
+
+
+  );
 }
 
 export default App
