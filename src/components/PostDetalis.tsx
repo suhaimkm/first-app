@@ -50,7 +50,7 @@ const PostDetails = () => {
             <p><strong>Title:</strong> {post.title}</p>
             <p><strong>Body:</strong> {post.body}</p>
             <p><strong>ID:</strong> {post.id}</p>
-            <Link to="/" className="btn btn-primary">Back to Posts</Link>
+            <Link to="/post" className="btn btn-primary">Back to Posts</Link>
         </div>
     );
 };

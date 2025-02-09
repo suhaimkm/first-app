@@ -51,30 +51,30 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              {/* <li className="nav-item">
+                <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>
+              </li>
+              {/* <li className="nav-item"> 
+                <Link className="nav-link" to="/cars">Cars</Link>
               </li> */}
               {/* <li className="nav-item">
-                <Link className="nav-link" to="/cars">Cars</Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link" to="/courses">Courses</Link>
               </li> */}
-              {/* <li className="nav-item">
-                <Link className="nav-link" to="/products">Products</Link>
-              </li> */}
               <li className="nav-item">
-                <Link className="nav-link" to="/">Posts</Link>
+                <Link className="nav-link" to="/products">Products</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/post">Posts</Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <Routes>
-        {/* <Route path="/" element={<AboutUs />} />
+        <Route path="/" element={<AboutUs />} />
       
-        <Route path="/products" element={<ProductList3 />} /> */}
-        <Route path="/" element={<PostList />} />
+        <Route path="/products" element={<ProductList3 />} />
+        <Route path="/post" element={<PostList />} />
         <Route path="/posts/:id" element={<PostDetails />} />
 
 
