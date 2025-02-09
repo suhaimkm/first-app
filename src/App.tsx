@@ -31,6 +31,11 @@ import ProductList3 from './components/ProductList3'
 import RecipeList from './components/RecipeList'
 import PostList from './components/PostList'
 import PostDetails from './components/PostDetalis'
+import ProductList4 from './components/ProductList4'
+import ProductDetails from './components/ProductDetails'
+import Home from './home'
+import PostSearch from './components/PostSearch'
+
 
 
 function App() {
@@ -54,28 +59,34 @@ function App() {
                 <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>
               </li>
-              {/* <li className="nav-item"> 
-                <Link className="nav-link" to="/cars">Cars</Link>
-              </li> */}
-              {/* <li className="nav-item">
-                <Link className="nav-link" to="/courses">Courses</Link>
-              </li> */}
+              <li className="nav-item">
+                <Link className="nav-link" to="/aboutus">About Us</Link>
+              </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/products">Products</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/post">Posts</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/productList4">ProductsWithDetails</Link>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
       <Routes>
-        <Route path="/" element={<AboutUs />} />
       
+        <Route path="/" element={<Home />} />
+        <Route path="aboutus" element={<AboutUs />} />
         <Route path="/products" element={<ProductList3 />} />
         <Route path="/post" element={<PostList />} />
+        <Route path="/productList4" element={<ProductList4 />} />
+        <Route path="/postdetails" element={<PostDetails />} />
+        <Route path="/postsearch" element={<PostSearch />} />
         <Route path="/posts/:id" element={<PostDetails />} />
+        <Route path="/productList4/:id" element={<ProductDetails />} />
+        
 
 
 

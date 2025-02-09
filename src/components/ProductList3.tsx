@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const ProductList3 = () => {
@@ -53,6 +54,7 @@ const ProductList3 = () => {
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text">Category: {product.category}</p>
                 <p className="card-text fw-bold">${product.price}</p>
+                <Link to={`/ProductList/${product.id}`}>view details</Link>
               </div>
             </div>
           </div>
