@@ -4,6 +4,8 @@ function Addcourses() {
     const API_URL = "https://67a97da26e9548e44fc3c52e.mockapi.io/courses";
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+    const [message, setMessage] = useState("");
+    
 
     const handleSubmit = (e :React.FormEvent) => {
         e.preventDefault();
@@ -23,15 +25,20 @@ function Addcourses() {
         };
 
         const response = await fetch(API_URL, request);
-        if (!response.ok) {
+        if (response.ok) {
             console.log("course added successfully");
             const data = await response.json();
             console.log(data);
+            setTitle("");
+            setDescription("");
+            setMessage("Course added successfully");
+
         }
     };      
 
     return (
-      <div>
+        <div>
+            {message && <div className="alert alert-success">{message}</div>}   
             <h1>Add Courses</h1>
             <form className="form-group mt-5 border p-5 shadow-lg rounded" onSubmit={handleSubmit}> 
                 <label htmlFor="titletextbox" className="text-secondary mb-3">TITLE</label>
