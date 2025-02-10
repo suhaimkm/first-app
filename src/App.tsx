@@ -35,6 +35,7 @@ import ProductList4 from './components/ProductList4'
 import ProductDetails from './components/ProductDetails'
 import Home from './home'
 import PostSearch from './components/PostSearch'
+import ProductListSearch from './components/ProductListSearch'
 
 
 
@@ -69,8 +70,9 @@ function App() {
                 <Link className="nav-link" to="/post">Posts</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/productList4">ProductsWithDetails</Link>
+                <Link className="nav-link" to="/productList4">Products2</Link>
               </li>
+              
             </ul>
           </div>
         </div>
@@ -84,6 +86,7 @@ function App() {
         <Route path="/productList4" element={<ProductList4 />} />
         <Route path="/postdetails" element={<PostDetails />} />
         <Route path="/postsearch" element={<PostSearch />} />
+        <Route path="/productlistsearch" element={<ProductListSearch />} />
         <Route path="/posts/:id" element={<PostDetails />} />
         <Route path="/productList4/:id" element={<ProductDetails />} />
         
