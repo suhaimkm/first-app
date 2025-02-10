@@ -36,6 +36,8 @@ import ProductDetails from './components/ProductDetails'
 import Home from './home'
 import PostSearch from './components/PostSearch'
 import ProductListSearch from './components/ProductListSearch'
+import Courses from './components/Courses'
+import Addcourses from './components/Addcourses'
 
 
 
@@ -81,6 +83,8 @@ function App() {
       
         <Route path="/" element={<Home />} />
         <Route path="aboutus" element={<AboutUs />} />
+        <Route path="courses" element={<Courses />} />
+        <Route path="add-courses" element={<Addcourses />} />
         <Route path="/products" element={<ProductList3 />} />
         <Route path="/post" element={<PostList />} />
         <Route path="/productList4" element={<ProductList4 />} />
@@ -89,6 +93,7 @@ function App() {
         <Route path="/productlistsearch" element={<ProductListSearch />} />
         <Route path="/posts/:id" element={<PostDetails />} />
         <Route path="/productList4/:id" element={<ProductDetails />} />
+
         
 
 
