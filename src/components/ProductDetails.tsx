@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-interface product {
-    id: number;
-    title: string;
-  category: string;
+
+interface Product {
+  id: number;
+  title: string;
+  description: string;
   price: number;
-  image: string;
+  thumbnail: string;
+  category: string;
+  brand: string;
+  rating: number;
 }
 
 const ProductDetails = () => {
-    const [product, setProduct] = useState < product | null>(null);
+    const [product, setProduct] = useState < Product | null>(null);
     const [error, setError] = useState<string | null>(null);
     const { id } = useParams<{ id: string }>();
 
     const fetchProducts = async () => {
-        const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const response = await fetch(`https://dummyjson.com/products/${id}`);
         if (!response.ok) {
             setError("An error occurred while fetching products");
         } else {
@@ -48,11 +52,14 @@ const ProductDetails = () => {
            {product && (
              <div key={product.id} className="col-md-4 mb-4">
                <div className="card h-100">
-                 <img src={product.image} className="card-img-top p-3" alt={product.title} style={{ height: "200px", objectFit: "contain" }} />
+               <img src={product.thumbnail} style={{ width: "200px" }} />
                  <div className="card-body">
                    <h5 className="card-title">{product.title}</h5>
                    <p className="card-text">Category: {product.category}</p>
                    <p className="card-text fw-bold">${product.price}</p>
+                   <p className="card-text fw-bold">${product.brand}</p>
+                   <p className="card-text fw-bold">${product.rating}</p>
+                   <p className="card-text fw-bold">${product.description}</p>
                    <Link to="/" className="btn btn-primary">back to product list</Link>
                  </div>
                </div>

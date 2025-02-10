@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 interface Product {
     id: number;
     title: string;
-}
+    price: number;
+    thumbnail: string;
+  }
 
 const ProductList4 = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [error, setError] = useState<string | null>(null);
 
     const fetchProducts = async () => {
-        const response = await fetch("https://fakestoreapi.com/products");
+        const response = await fetch("https://dummyjson.com/products");
         if (!response.ok) {
             setError("An error occurred while fetching products");
         } else {
             const data = await response.json();
-            setProducts(data);
+            setProducts(data.products);
         }
     };
 
@@ -44,8 +45,12 @@ const ProductList4 = () => {
                 {products.map((product) => (
                     <div key={product.id} className="col-md-4 mb-4">
                         <div className="card h-100">
+                        <img src={product.thumbnail} className="card-img-top" />
                             <div className="card-body">
                                 <h5 className="card-title">{product.title}</h5>
+                                <h5 className="card-title">{product.price}</h5>
+                                
+
                                 <Link to={`/ProductList4/${product.id}`}>view details</Link>
                             </div>
                         </div>
