@@ -8,7 +8,7 @@ function Addcourses() {
     const [descriptionError, setDescriptionError] = useState("");
     const [duration, setDuration] = useState("");
     const [fees, setFees] = useState("");
-    // const [image, setImage] = useState("");
+    const [image, setImage] = useState("");
     const [message, setMessage] = useState("");
     
 
@@ -39,11 +39,13 @@ function Addcourses() {
         } else {
             setDescriptionError("");
         }
+        return validForm;
+    }
             
         
 
         const addCourse = async () => {
-            let requestBody = { title, description };
+            let requestBody = { title, description , duration, fees, image };
             let requestBodyJson = JSON.stringify(requestBody);
 
             const request = {
@@ -61,6 +63,9 @@ function Addcourses() {
                 console.log(data);
                 setTitle("");
                 setDescription("");
+                setDuration("");
+                setFees("");
+                setImage("");
                 setMessage("Course added successfully");
 
             }
@@ -95,10 +100,11 @@ function Addcourses() {
                         onChange={(e) => setDescription(e.target.value)}
                     />
                     {descriptionError ? (
-                        <p className="text-danger small"> {titleError} </p>
+                        <p className="text-danger small"> {descriptionError} </p>
                     ) : (
                         <p></p>
                     )}
+                    <label htmlFor="durationtextbox" className="text-secondary mb-3">DURATION</label>
                     <input type="text"
                         name="duration"
                         id="duration"
@@ -107,6 +113,7 @@ function Addcourses() {
                         placeholder="duration"
                         onChange={(e) => setDuration(e.target.value)}
                     />
+                    <label htmlFor="feestextbox" className="text-secondary mb-3">FEES</label>
                     <input type="text"
                         name="fees"
                         id="fees"
@@ -115,18 +122,19 @@ function Addcourses() {
                         placeholder="fees"
                         onChange={(e) => setFees(e.target.value)}
                     />
-                    {/* <input type="text"
+                    <label htmlFor="imagetextbox" className="text-secondary mb-3">IMAGE</label>
+                    <input type="text"
                 name="image"
-                    id="dimage"
+                    id="image"
                     value={image}
                 className="form-control mb-4"
                     placeholder="image"
-                    onChange={(e) => setDescription(e.target.value)}
-                /> */}
+                    onChange={(e) => setImage(e.target.value)}
+                />
                     <button type="submit" className="btn btn-primary">Add Course</button>
                 </form>
             </div>)
             
     }
-};
+
     export default Addcourses;
