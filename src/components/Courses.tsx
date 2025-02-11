@@ -8,6 +8,10 @@ function Courses() {
         id: number;
         title: string;
         description: string;
+        duration: string;
+        fees: number;
+        image: string;
+
        
     }
 
@@ -33,6 +37,9 @@ function Courses() {
                         <th scope="col">ID</th>
                         <th scope="col">TITLE</th>
                         <th scope="col">DESCRIPTION</th>
+                        <th scope="col">DURATION</th>
+                        <th scope="col">FEES</th>
+                        <th scope="col">IMAGE</th>
                         
                     </tr>
                 </thead>
@@ -43,6 +50,9 @@ function Courses() {
                                 <td>{course.id}</td>
                                 <td>{course.title}</td>
                                 <td>{course.description}</td>
+                                <td>{course.duration}</td>
+                                <td>{course.fees}</td>
+                                {/* <td>{course.image}</td> */}
                                
                             </tr>
                         );
