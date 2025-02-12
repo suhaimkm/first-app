@@ -60,10 +60,11 @@ function Courses() {
                             <td>{course.description}</td>
                             <td>{course.duration}</td>
                             <td>{course.fees}</td>
-                            <td><img className="img-thumbnail" src={course.image} alt="course" style={{ width:"100px", height:"100px" }}/></td>
+                            <td><img className="img-thumbnail" src={course.image} alt="course" style={{ width: "100px", height: "100px" }} /></td>
                             <td>
                                 <button className="btn btn-danger" onClick={() => deleteCourse(course.id)}>❌Delete</button>
-                                
+                                <Link className="btn btn-warning ms-2" to={`/edit-courses/${course.id}`}>✏️Edit</Link>
+
                             </td>
                         </tr>
                     ))}
